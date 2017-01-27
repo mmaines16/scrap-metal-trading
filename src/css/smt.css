@@ -1,0 +1,81 @@
+.mobile-link {
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-link-row {
+  padding: 0px;
+  height: 30%;
+}
+
+
+.mobile-link-long {
+  background-color: grey;
+  width: 53%;
+  display: inline-block;
+}
+
+.mobile-link-short {
+  background-color: #333;
+  width: 47%;
+  display: inline-block;
+}
+
+.mobile-link-full {
+  background-color: #aaa;
+  width: 100%;
+  display: inline-block;
+}
+
+div#MobileMenu {
+  padding: 0px;
+  height: 100vh;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+/* Css for MobileMenu Components animation when entering and leaving the DOM */
+/*.fade {
+  opacity: 1;
+  transition: all 1s;
+}*/
+
+.fade-appear {
+  opactiy: 0.01;
+}
+
+.fade-appear.fade-appear-active {
+  opactiy: 1;
+  transition: all 1s;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: all .3s ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0;
+}
+
+
+.h1-a {
+  opactiy: 1;
+}
+
+.h1-a:hover {
+  opacity: 0.01;
+
+  transition: all 1s;
+}
