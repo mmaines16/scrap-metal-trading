@@ -1,7 +1,7 @@
 import React from "react";
 import MobileLinkRow from "./MobileMenu/MobileLinkRow";
 
-import {TweenMax} from "gsap";
+import {pages} from "./resources/pages";
 
 export default class ComponentName extends React.Component {
   constructor() {
@@ -27,9 +27,9 @@ export default class ComponentName extends React.Component {
     const links = [];
     return (
       <div id="MobileMenu" class={this.state.style}>
-        <MobileLinkRow type="even" link="" />
-        <MobileLinkRow type="odd" link=""/>
-        <MobileLinkRow type="single" link=""/>
+        <MobileLinkRow type="even" />
+        <MobileLinkRow type="odd" />
+        <MobileLinkRow type="single" />
       </div>
     );
   }

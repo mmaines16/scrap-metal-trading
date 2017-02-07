@@ -1,5 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {Router, Route, hashHistory} from "react-router";
+
+import Home from "./Home";
+import About from "./About";
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import NavBar from "./NavBar";
@@ -9,9 +13,18 @@ export default class ComponentName extends React.Component {
   constructor() {
     super();
 
+    this.router = <Router history={hashHistory}>
+                        <Route path="/" component={Home} />
+                        <Route path="/about" component={About} />
+                      </Router>;
+
+    this.currentPage = this.router;
+
+
+
     this.state = {
       mobileMenuOn: false,
-      currentPage: "<div><h1>Content</h1></div>",
+      currentPage: this.currentPage,
       style: "fade-enter",
     };
   }
@@ -40,7 +53,7 @@ export default class ComponentName extends React.Component {
          currentPage = <MobileMenu key={this} links="" class={this.state.style}/>
          break;
        case false:
-         currentPage = <div key="div"><h1>Content</h1></div>
+         currentPage = this.router;
          break;
      }
 

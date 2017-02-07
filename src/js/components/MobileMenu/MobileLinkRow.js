@@ -1,6 +1,7 @@
 import React from "react";
 
-export default class ComponentName extends React.Component {
+export default class MobileLinkRow extends React.Component {
+
   render() {
 
     if(this.props.type==="even") {
