@@ -14,5 +14,5 @@ export const pages = [
   {
     "title": "Follow Us",
     "url": "follow-us",
-  }
+  },
 ];

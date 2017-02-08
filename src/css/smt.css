@@ -89,3 +89,33 @@ div#MobileMenu {
   top: 30%;
   text-align: center;
 }
+
+.banner {
+  min-height: 400px;
+  max-height: 400px;
+}
+
+.banner-img {
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.banner-img-filter {
+  width: 100%;
+
+  position: absolute;
+
+  background-color: rgba(160, 160, 160, 0.5);
+  opacity: .5;
+}
+
+.banner-content {
+  color: white;
+}
+
+.banner-header {
+  min-height: 400px;
+  max-height: 400px;
+}
