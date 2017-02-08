@@ -10,6 +10,7 @@ export default class NavBar extends React.Component {
 
     this.state = {
       activeLink: "Home",
+      historyStrategy: "hash",
     };
   }
 
@@ -28,10 +29,24 @@ export default class NavBar extends React.Component {
     }
   };
 
+  componentDidMount() {
+    //set state property based on history strategy passed in as a property
+    if(this.props.historyStrategy) {
+      this.setState({...this.state, historyStrategy: this.props.historyStrategy});
+    }
+  }
+
   render() {
+    console.log(this.state);
+
+    //Change link and href base url based on history strategy passed in as a property
+    var baseUrl = "/";
+    if(this.state.historyStrategy == "hash") {
+      baseUrl = "#/"
+    }
 
     const links = pages.map((page) =>
-      <li key={page.title} class={() => this.getActiveState(page.title)}><a href={ "#/" + page.url }>{page.title}</a></li>
+      <li key={page.title} class={() => this.getActiveState(page.title)}><a href={ baseUrl + page.url }>{page.title}</a></li>
     );
 
     return (

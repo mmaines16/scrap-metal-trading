@@ -6,5 +6,13 @@ export const pages = [
   {
     "title": "About",
     "url": "about",
+  },
+  {
+    "title": "Contact Us",
+    "url": "contact-us",
+  },
+  {
+    "title": "Follow Us",
+    "url": "follow-us",
   }
 ];

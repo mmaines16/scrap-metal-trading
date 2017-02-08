@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Router, Route, hashHistory} from "react-router";
+import {Router, Route, hashHistory, browserHistory} from "react-router";
 
 import Home from "./Home";
 import About from "./About";
@@ -13,9 +13,22 @@ export default class ComponentName extends React.Component {
   constructor() {
     super();
 
-    this.router = <Router history={hashHistory}>
+    //-----Quickly switch history strategy across the entire app-------
+    var strategies = ["hash", "browser"];
+
+    var historyStrategy = strategies[0];
+
+    var strategy = hashHistory;
+
+    if(historyStrategy == "browser") {
+      strategy = browserHistory;
+    }
+    //------------------------------------------------------------------
+
+    this.router = <Router history={ strategy }>
                         <Route path="/" component={Home} />
                         <Route path="/about" component={About} />
+                        <Route path="*" component={Home} />
                       </Router>;
 
     this.currentPage = this.router;
@@ -26,10 +39,13 @@ export default class ComponentName extends React.Component {
       mobileMenuOn: false,
       currentPage: this.currentPage,
       style: "fade-enter",
+      historyStrategy: historyStrategy,
     };
   }
 
   mobileMenuToggle = () => {
+
+    console.log("Mobile Menu Toggle");
     switch(this.state.mobileMenuOn) {
       case false:
         this.setState({...this.state, mobileMenuOn: true, style: "fade-enter fade-enter-active"});
@@ -50,7 +66,9 @@ export default class ComponentName extends React.Component {
     var currentPage = this.state.currentPage;
      switch (this.state.mobileMenuOn) {
        case true:
-         currentPage = <MobileMenu key={this} links="" class={this.state.style}/>
+         currentPage = <MobileMenu key={this} links="" class={this.state.style}
+                                  mobileToggle={this.mobileMenuToggle}
+                                  historyStrategy={this.state.historyStrategy}/>
          break;
        case false:
          currentPage = this.router;
@@ -60,7 +78,7 @@ export default class ComponentName extends React.Component {
 
     return (
       <div>
-        <NavBar mobileToggle={this.mobileMenuToggle} links="" />
+        <NavBar mobileToggle={this.mobileMenuToggle} historyStrategy={this.state.historyStrategy} />
           <ReactCSSTransitionGroup
             transitionName="fade"
             transitionEnterTimeout={300}

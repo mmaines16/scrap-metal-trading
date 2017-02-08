@@ -7,6 +7,7 @@
 .mobile-link-row {
   padding: 0px;
   height: 30%;
+  text-align: center;
 }
 
 
@@ -26,6 +27,7 @@
   background-color: #aaa;
   width: 100%;
   display: inline-block;
+  height
 }
 
 div#MobileMenu {
@@ -78,4 +80,12 @@ div#MobileMenu {
   opacity: 0.01;
 
   transition: all 1s;
+}
+
+.mobile-link-header-text {
+  display: block;
+  height: 50px;
+  width: 100%;
+  top: 30%;
+  text-align: center;
 }
