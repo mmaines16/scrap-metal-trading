@@ -4,7 +4,7 @@
   "description": "Front End Website for Scrap Metal Trading. Built using React",
   "main": "client.min.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base src --inline --hot",
+    "dev": "webpack-dev-server --content-base src --inline --hot -d --history-api-fallback --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mason Maines",
