@@ -1,13 +1,34 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 export default class Banner extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      style: {},
+      style: {
+        transition: "all 50ms ease-in-out",
+      },
       bannerImg: "",
+      imgScroll: "false",
     };
+  }
+
+  moveImage = () => {
+    var node = ReactDOM.findDOMNode(this);
+    var bannerImg = node.getElementsByClassName('banner-img')[0];
+
+    var speed = .55;
+
+    console.log(bannerImg.style.top);
+
+    var windowYOffset = window.pageYOffset,
+          elTop = (-windowYOffset * speed) + "px";
+
+
+      bannerImg.style.top = elTop;
+      console.log(bannerImg.style.backgroundPosition);
+
   }
 
   componentDidMount() {
@@ -15,10 +36,23 @@ export default class Banner extends React.Component {
 
     if(this.props.style) {
       newState.style = this.props.style;
+      newState = Object.assign(newState, this.state.style);
     }
     if(this.props.bannerImg) {
       newState.bannerImg = this.props.bannerImg;
+
     }
+    if(this.props.imgScroll=="true") {
+      newState.imgScroll = this.props.imgScroll;
+
+      console.log("Adding window scroll event");
+
+      window.addEventListener("scroll", () => {
+        this.moveImage();
+      });
+
+    }
+
 
     this.setState(newState);
   }
@@ -27,16 +61,14 @@ export default class Banner extends React.Component {
 
 
     return (
-      <div class="banner banner-header">
+      <div class="banner">
         <div class="banner-img-filter banner-header">
-          <img src={this.state.bannerImg} class="banner-img" />
+          <img src={this.state.bannerImg} class="banner-img" style={this.state.style}/>
         </div>
 
-          <div class="row">
-            <div class="col-sm-12">
-              {this.props.children}
-            </div>
-          </div>
+        <div class="banner-header-content">
+            {this.props.children}
+        </div>
       </div>
     );
   }

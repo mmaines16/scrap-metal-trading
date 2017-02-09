@@ -52,7 +52,7 @@ export default class NavBar extends React.Component {
     return (
       <div>
       <header>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button"

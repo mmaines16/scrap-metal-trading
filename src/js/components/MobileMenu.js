@@ -14,12 +14,22 @@ export default class MobileMenu extends React.Component {
   }
 
   componentDidMount() {
+
+    console.log(this.props.className);
+
     if(this.props.historyStrategy) {
       this.setState({...this.state, historyStrategy: this.props.historyStrategy});
+    }
+    if(this.props.className) {
+      console.log("setting style props");
+      console.log(this.props.className);
+      this.setState({...this.state, style: this.props.className});
     }
   }
 
   render() {
+
+    console.log(this.state);
 
     //Change link and href base url based on history strategy passed in as a property
     var baseUrl = "/";
@@ -36,8 +46,6 @@ export default class MobileMenu extends React.Component {
     const links = pages.map((page) =>
       <MobileLinkRow key={page.title} page={page} style={linkRowStyle} baseUrl={baseUrl} onClick={this.props.mobileToggle} ></MobileLinkRow>
     );
-
-    console.log(links);
 
     return (
       <div id="MobileMenu" class={this.state.style}>

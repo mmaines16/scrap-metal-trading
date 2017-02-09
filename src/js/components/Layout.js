@@ -84,7 +84,10 @@ export default class ComponentName extends React.Component {
             transitionEnterTimeout={300}
             transitionLeaveTimeout={100}>
 
+            <div style={{marginTop: "50px",}}>
               {currentPage}
+            </div>
+
 
           </ReactCSSTransitionGroup>
       </div>
