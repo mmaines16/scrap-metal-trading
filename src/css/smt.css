@@ -301,9 +301,19 @@ div#MobileMenu {
 
   .info-nav-section {
     font-size: 6px;
+    min-width: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
   }
 
   .info-nav-header a, span{
+    font-size: 14px;
+  }
+
+  .info-nav-section i{
     font-size: 14px;
   }
 

@@ -26,6 +26,7 @@ export default class InfoNavBar extends React.Component {
       if(info.type == "hours") {
         return (
           <div class="info-nav-section" key={info.type}>
+            <i class={info.iconClass} style={{marginRight: "5px"}} aria-hidden="true"></i>
             <span class="info-nav-header" onClick={this.itemOpenExtended} onBlur={this.itemCloseExtended}>
               {info.headerText.toUpperCase()}:
             </span>
@@ -52,6 +53,7 @@ export default class InfoNavBar extends React.Component {
       else {
         return (
           <div class="info-nav-section" key={info.type}>
+            <i class={info.iconClass} style={{marginRight: "5px"}} aria-hidden="true"></i>
             <span class="info-nav-header"><a href={info.href}>{info.headerText.toUpperCase()}</a>: </span>
             <span class="info-nav-data"><a href={info.href}>{info.data}</a></span>
           </div>
