@@ -1,5 +1,6 @@
 import React from "react";
 import {pages} from "./resources/pages";
+import InfoNavBar from "./InfoNavBar";
 
 export default class NavBar extends React.Component {
 
@@ -51,8 +52,11 @@ export default class NavBar extends React.Component {
 
     return (
       <div>
+
       <header>
+
         <nav class="navbar navbar-default navbar-fixed-top">
+          <InfoNavBar />
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button"

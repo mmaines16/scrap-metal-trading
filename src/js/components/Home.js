@@ -14,11 +14,11 @@ export default class Home extends React.Component {
     }
 
     return (
-      <div>
+      <div id="home">
         <Banner style={backgroundStyles} bannerImg="/img/people-coffee-notes-tea.jpg" imgScroll="true">
           <div class="row">
             <div class="col-sm-offset-3 col-sm-6" style={{textAlign: "center", postion: "relative"}}>
-              <h1>HOME</h1>
+              <span>HOME</span>
             </div>
           </div>
         </Banner>

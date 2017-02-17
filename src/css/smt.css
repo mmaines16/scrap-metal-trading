@@ -39,6 +39,10 @@ div#MobileMenu {
   margin-bottom: 0px;
 }
 
+.nav li:hover {
+  background-color: #dad9d9;
+}
+
 /* Css for MobileMenu Components animation when entering and leaving the DOM */
 /*.fade {
   opacity: 1;
@@ -99,6 +103,10 @@ div#MobileMenu {
   transition: all 100ms ease-in-out;
 }
 
+#home .banner {
+  margin-top: 80px;
+}
+
 .banner-img {
   z-index: -200;
   width: 100%;
@@ -112,11 +120,13 @@ div#MobileMenu {
 
   position: absolute;
 
-  top: 20px;
-  left: 0px;
-
   background-color: rgba(160, 160, 160, 0.5);
   opacity: .5;
+}
+
+#home .banner-img-filter {
+  top: 20px;
+  left: 0px;
 }
 
 .banner-header-content {
@@ -127,20 +137,77 @@ div#MobileMenu {
   max-height: 30vh;
   transition: all 100ms ease-in-out;
 
+  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+  font-size: 128px;
+}
+
+#home, banner-header-content {
+  margin-left: -90px;
 }
 
 .banner-header {
   min-height: 40vh;
   max-height: 40vh;
 
-  margin-top: 0px;
-
   overflow: hidden;
 
-  margin-top: 30px;
+}
+
+#home .banner-header {
+  margin-top: 80px;
 
   top: 0px;
+}
 
+.info-nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+
+  background-color: rgba(78,181,227,.36);
+}
+
+.info-nav-section {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  font-size: 14px;
+
+  max-height: 30px;
+}
+
+.info-nav-section .info-nav-header {
+  font-family: Impact, Charcoal, sans-serif;
+  margin-right: 5px;
+}
+
+.info-nav-section .info-nav-data {
+  font-family: "Courier New", Courier, monospace;
+  margin-right: 5px;
+  display: flex;
+
+
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.info-nav-list {
+  list-style: none;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  padding-left: 0px;
+  margin-top: 10px;
+}
+
+.info-nav-list-item {
+  margin: 5px;
+  color: #337ab7;
 }
 
 @media (max-width: 790px) {
