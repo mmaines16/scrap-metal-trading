@@ -39,7 +39,7 @@ div#MobileMenu {
   margin-bottom: 0px;
 }
 
-.nav .navbar-main-link:hover {
+.navbar-main-links>li:hover {
   background-color: #dad9d9;
 }
 
@@ -200,7 +200,7 @@ div#MobileMenu {
   max-height: 30px;
 }
 
-.info-nav-section .info-nav-header {
+.info-nav-section > .info-nav-header {
   font-family: Impact, Charcoal, sans-serif;
   margin-right: 5px;
 

@@ -22,9 +22,15 @@ export default class NavBar extends React.Component {
   getActiveState = (pageTitle) => {
     switch(pageTitle) {
       case "Home":
-        return true;
+        if (this.state.activeLink=="Home")
+          return true;
+        else
+          return false;
       case "About":
-        return false;
+        if (this.state.activeLink=="About")
+          return true;
+        else
+          return false;
       default:
         return false;
     }
@@ -46,9 +52,11 @@ export default class NavBar extends React.Component {
       baseUrl = "#/"
     }
 
-    const links = pages.map((page) =>
-      <li key={page.title} class={() => this.getActiveState(page.title) + "navbar-main-link"}><a href={ baseUrl + page.url }>{page.title}</a></li>
-    );
+    const links = pages.map((page) => {
+        return  <li key={page.title} class={this.state.activeLink==page.title ? "active": ""} onClick={() => {this.onLinkClick(page.title)}}>
+                  <a href={ baseUrl + page.url }>{page.title}</a>
+                </li>
+    });
 
     return (
       <div>
@@ -76,7 +84,7 @@ export default class NavBar extends React.Component {
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
+              <ul class="nav navbar-nav navbar-main-links">
                 {links}
 
               </ul>
