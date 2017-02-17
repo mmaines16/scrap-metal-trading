@@ -47,7 +47,7 @@ export default class NavBar extends React.Component {
     }
 
     const links = pages.map((page) =>
-      <li key={page.title} class={() => this.getActiveState(page.title)}><a href={ baseUrl + page.url }>{page.title}</a></li>
+      <li key={page.title} class={() => this.getActiveState(page.title) + "navbar-main-link"}><a href={ baseUrl + page.url }>{page.title}</a></li>
     );
 
     return (
@@ -81,15 +81,7 @@ export default class NavBar extends React.Component {
 
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li>
-                  <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Search" />
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                  </form>
-                </li>
+                <li><i class="fa fa-facebook-official social-media-link" aria-hidden="true"></i></li>
               </ul>
             </div>
           </div>

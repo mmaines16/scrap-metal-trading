@@ -39,8 +39,22 @@ div#MobileMenu {
   margin-bottom: 0px;
 }
 
-.nav li:hover {
+.nav .navbar-main-link:hover {
   background-color: #dad9d9;
+}
+
+.navbar .fa-facebook-official {
+  font-size: 30px;
+  color: blue;
+}
+
+.navbar .fa-facebook-official:hover {
+  font-size: 30px;
+  color: lightblue;
+}
+
+.navbar .social-media-link {
+  margin-top: 10px;
 }
 
 /* Css for MobileMenu Components animation when entering and leaving the DOM */
@@ -159,6 +173,14 @@ div#MobileMenu {
   top: 0px;
 }
 
+#home .fa-play-circle-o {
+  color: lightgrey;
+}
+
+#home .fa-play-circle-o:hover {
+  color: grey;
+}
+
 .info-nav-bar {
   display: flex;
   flex-direction: row;
@@ -181,6 +203,11 @@ div#MobileMenu {
 .info-nav-section .info-nav-header {
   font-family: Impact, Charcoal, sans-serif;
   margin-right: 5px;
+
+}
+
+.info-nav-header a {
+  color: #333333;
 }
 
 .info-nav-section .info-nav-data {
@@ -223,5 +250,13 @@ div#MobileMenu {
     max-height: 25vh;
 
 
+  }
+
+  .info-nav-section {
+    font-size: 6px;
+  }
+
+  .info-nav-data {
+    display: none;
   }
 }
