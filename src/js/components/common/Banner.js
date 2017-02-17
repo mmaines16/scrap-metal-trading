@@ -18,7 +18,7 @@ export default class Banner extends React.Component {
     var node = ReactDOM.findDOMNode(this);
     var bannerImg = node.getElementsByClassName('banner-img')[0];
 
-    var speed = .55;
+    var speed = .45;
 
     console.log(bannerImg.style.top);
 

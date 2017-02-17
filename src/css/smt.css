@@ -178,6 +178,16 @@ div#MobileMenu {
   color: grey;
 }
 
+#home .fa-youtube-play {
+  color: lightgrey !important;
+}
+
+#home .fa-youtube-play:hover {
+  color: grey !important;
+}
+
+
+
 .info-nav-bar {
   display: flex;
   flex-direction: row;
@@ -296,6 +306,10 @@ div#MobileMenu {
   }
 
   .fa-play-circle-o {
+    font-size: 90px;
+  }
+
+  .fa-youtube-play {
     font-size: 90px;
   }
 
