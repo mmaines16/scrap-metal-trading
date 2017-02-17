@@ -24,7 +24,7 @@ export const info = [
     "data": {
       "monFri": "8AM-5PM",
       "sat": "8AM-2PM",
-      "sun": "closed",
+      "sun": "Closed",
     },
   },
 ];

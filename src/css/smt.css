@@ -45,13 +45,9 @@ div#MobileMenu {
 
 .navbar .fa-facebook-official {
   font-size: 30px;
-  color: blue;
+
 }
 
-.navbar .fa-facebook-official:hover {
-  font-size: 30px;
-  color: lightblue;
-}
 
 .navbar .social-media-link {
   margin-top: 10px;
@@ -149,19 +145,20 @@ div#MobileMenu {
   justify-content: center;
   min-height: 30vh;
   max-height: 30vh;
+  max-width: 95vw;
   transition: all 100ms ease-in-out;
 
   font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
   font-size: 128px;
 }
 
-#home, banner-header-content {
-  margin-left: -90px;
-}
+
 
 .banner-header {
   min-height: 40vh;
   max-height: 40vh;
+
+  max-width: 100vw;
 
   overflow: hidden;
 
@@ -237,26 +234,146 @@ div#MobileMenu {
   color: #337ab7;
 }
 
+.info-nav-data-mobile {
+  position: absolute;
+  top: 25px;
+  left: 43vw;
+
+  width: 50vw;
+  height: 15vh;
+  box-shadow: 2px 2px 2px 2px black;
+
+  z-index: 999;
+
+
+  transition: all 100ms ease-in-out;
+}
+
+.info-nav-list-mobile {
+  font-size: 16px;
+  list-style: none;
+}
+
+.info-nav-list-mobile-exit {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+.info-nav-list-mobile-exit i{
+  position: absolute;
+  color: red;
+  right: -25px;
+  font-size: 18px;
+}
+
+.mobile-social-media-links {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  justify-content: space-around;
+
+  text-align: center;
+
+  min-width: 100px;
+}
+
+/*Bigger font size for social media icons in the mobile menu*/
+.mobile-link-row .mobile-social-media-links {
+  font-size: 50px;
+}
+
 @media (max-width: 790px) {
   .banner-header {
     min-height: 30vh;
     max-height: 30vh;
-
-
   }
 
   .banner-header-content {
     min-height: 25vh;
     max-height: 25vh;
 
+  }
 
+  .fa-play-circle-o {
+    font-size: 90px;
   }
 
   .info-nav-section {
     font-size: 6px;
   }
 
-  .info-nav-data {
-    display: none;
+  .info-nav-header a, span{
+    font-size: 14px;
   }
+
+  .info-nav-data a{
+    display: none;
+    max-width: 20vw;
+    max-height: 10vh;
+  }
+
+  .info-nav-data ul{
+    display: none;
+    max-width: 20vw;
+    max-height: 10vh;
+  }
+}
+
+/*===================Social Media Icon Color Definitions===================*/
+
+.fa-facebook, .fa-facebook-official, .fa-facebook-square {
+    color: #3b5998;
+}
+
+.fa-facebook:hover, .fa-facebook-official:hover, .fa-facebook-square:hover {
+    color: #2d3f67;
+}
+
+.fa-twitter, .fa-twitter-square {
+    color: #00aced
+}
+
+.fa-twitter:hover, .fa-twitter-square:hover {
+    color: #007fad;
+}
+
+.fa-google-plus, .fa-google-plus-square {
+    color: #dd4b39
+}
+
+.fa-youtube, .fa-youtube-play, .fa-youtube-square {
+    color: #bb0000
+}
+
+.fa-tumblr, .fa-tumblr-square {
+    color: #32506d
+}
+
+.fa-flickr {
+    color: #ff0084
+}
+
+.fa-vimeo-square {
+    color: #aad450
+}
+
+.fa-pinterest, .fa-pinterest-square {
+    color: #cb2027
+}
+
+.fa-linkedin, .fa-linkedin-square {
+    color: #007bb6
+}
+
+.fa-instagram {
+    color: #517fa4;
+}
+
+.fa-instagram:hover {
+    color: #395a74;
+}
+
+.fa-spotify {
+    color: #1ED760;
 }

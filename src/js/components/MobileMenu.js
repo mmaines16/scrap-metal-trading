@@ -1,5 +1,6 @@
 import React from "react";
 import MobileLinkRow from "./MobileMenu/MobileLinkRow";
+import MobileSocialMediaRow from "./MobileMenu/MobileSocialMediaRow";
 
 import {pages} from "./resources/pages";
 
@@ -37,7 +38,7 @@ export default class MobileMenu extends React.Component {
       baseUrl = "#/";
     }
 
-    var linkRowHeight = (Math.floor(100 / pages.length)-3).toString() + "%";
+    var linkRowHeight = (Math.floor(100 / (pages.length+1))-3).toString() + "%";
 
     var linkRowStyle = {
       height: linkRowHeight,
@@ -50,6 +51,7 @@ export default class MobileMenu extends React.Component {
     return (
       <div id="MobileMenu" class={this.state.style}>
         {links}
+        <MobileSocialMediaRow style={linkRowStyle} />
       </div>
     );
   }

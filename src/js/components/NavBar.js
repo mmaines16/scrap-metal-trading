@@ -1,5 +1,6 @@
 import React from "react";
 import {pages} from "./resources/pages";
+import {socialMediaLinks} from "./resources/socialMediaLinks";
 import InfoNavBar from "./InfoNavBar";
 
 export default class NavBar extends React.Component {
@@ -58,6 +59,10 @@ export default class NavBar extends React.Component {
                 </li>
     });
 
+    const mediaLinks = socialMediaLinks.map((smLink) => {
+      return <li><a href={smLink.url}> <i style={{fontSize: "30px",}} class={smLink.faClass} /></a></li>
+    });
+
     return (
       <div>
 
@@ -89,7 +94,9 @@ export default class NavBar extends React.Component {
 
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><i class="fa fa-facebook-official social-media-link" aria-hidden="true"></i></li>
+                  <div class="mobile-social-media-links">
+                    { mediaLinks }
+                  </div>
               </ul>
             </div>
           </div>
