@@ -15,7 +15,7 @@ export default class Home extends React.Component {
 
     return (
       <div id="home">
-        <Banner style={backgroundStyles} bannerImg="/img/people-coffee-notes-tea.jpg" imgScroll="true">
+        <Banner style={backgroundStyles} bannerImg="/img/scrap-metal-pile.jpg" imgScroll="true">
           <div class="row">
             <div class="col-sm-offset-3 col-sm-6" style={{textAlign: "center", postion: "relative"}}>
               <span onClick={() => {alert("Play Brand Video\nChange Me")}}><i class="fa fa-youtube-play" aria-hidden="true"></i></span>

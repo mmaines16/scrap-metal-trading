@@ -60,8 +60,15 @@ export default class NavBar extends React.Component {
     });
 
     const mediaLinks = socialMediaLinks.map((smLink) => {
-      return <li><a href={smLink.url}> <i style={{fontSize: "30px",}} class={smLink.faClass} /></a></li>
+      return <li key={smLink.platform}><a href={smLink.url}> <i style={{fontSize: "30px",}} class={smLink.faClass} /></a></li>
     });
+
+    //40% of the viewport's width is the max-width of the social media section
+    //Divide that by the number of links to get the proportion of space per link
+    //Invert (one divided result ^) because we want a higher number with more links => percentage of space as decimal
+    //Multiply by 100 to turn the decimal to a true percent
+    const mediaLinksWidth = (1/(40/socialMediaLinks.length))*100;
+    const mediaLinksWidthMin = mediaLinksWidth + "vw"; //convert to string and add viewport width css keyword
 
     return (
       <div>
@@ -94,7 +101,7 @@ export default class NavBar extends React.Component {
 
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                  <div class="mobile-social-media-links">
+                  <div class="mobile-social-media-links" style={{minWidth: mediaLinksWidthMin}}>
                     { mediaLinks }
                   </div>
               </ul>

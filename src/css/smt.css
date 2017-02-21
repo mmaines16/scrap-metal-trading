@@ -119,8 +119,8 @@ div#MobileMenu {
 
 .banner-img {
   z-index: -200;
-  width: 100%;
-  height: 800px;
+  width: 120%;
+  height: 600px;
   position: absolute;
   transition: all 100ms ease-in-out;
 }
@@ -281,11 +281,12 @@ div#MobileMenu {
   display: flex;
   flex-direction: row;
   flex-flow: row;
-  justify-content: space-around;
+  justify-content: space-between;
 
   text-align: center;
 
-  min-width: 100px;
+  min-width: 10vw;
+  max-width: 30vw;
 }
 
 /*Bigger font size for social media icons in the mobile menu*/
@@ -297,6 +298,11 @@ div#MobileMenu {
   .banner-header {
     min-height: 30vh;
     max-height: 30vh;
+  }
+
+  .banner-img {
+    width: 120%;
+    height: 350px;
   }
 
   .banner-header-content {
@@ -342,6 +348,21 @@ div#MobileMenu {
     max-width: 20vw;
     max-height: 10vh;
   }
+
+  .mobile-social-media-links {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+
+    min-width: 100vw;
+    max-width: 100vw;
+
+    padding: 10vw;
+  }
 }
 
 /*===================Social Media Icon Color Definitions===================*/
@@ -355,7 +376,7 @@ div#MobileMenu {
 }
 
 .fa-twitter, .fa-twitter-square {
-    color: #00aced
+    color: #00aced;
 }
 
 .fa-twitter:hover, .fa-twitter-square:hover {
@@ -363,31 +384,39 @@ div#MobileMenu {
 }
 
 .fa-google-plus, .fa-google-plus-square {
-    color: #dd4b39
+    color: #dd4b39;
+}
+
+.fa-google-plus:hover, .fa-google-plus-square:hover {
+    color: #aa0a05;
 }
 
 .fa-youtube, .fa-youtube-play, .fa-youtube-square {
-    color: #bb0000
+    color: #bb0000;
+}
+
+.fa-youtube:hover, .fa-youtube-play:hover, .fa-youtube-square:hover {
+    color: #880000;
 }
 
 .fa-tumblr, .fa-tumblr-square {
-    color: #32506d
+    color: #32506d;
 }
 
 .fa-flickr {
-    color: #ff0084
+    color: #ff0084;
 }
 
 .fa-vimeo-square {
-    color: #aad450
+    color: #aad450;
 }
 
 .fa-pinterest, .fa-pinterest-square {
-    color: #cb2027
+    color: #cb2027;
 }
 
 .fa-linkedin, .fa-linkedin-square {
-    color: #007bb6
+    color: #007bb6;
 }
 
 .fa-instagram {
