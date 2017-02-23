@@ -37,10 +37,21 @@ div#MobileMenu {
 
 .navbar {
   margin-bottom: 0px;
+  opacity: .9;
 }
 
-.navbar-main-links>li:hover {
-  background-color: #dad9d9;
+.navbar-main-links>li:hover, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  background-color: #1a99ed;
+  /*background-color: #dad9d9;*/
+}
+.navbar-main-links>li>a:hover {
+  color: white !important;
+}
+
+
+.navbar-default .navbar-nav>.active>a {
+  color: white !important;
+  background-color: #0172BC;
 }
 
 .navbar .fa-facebook-official {
@@ -105,8 +116,8 @@ div#MobileMenu {
 }
 
 .banner {
-  min-height: 100vh;
-  max-height: 100vh;
+  min-height: 50vh;
+  max-height: 50vh;
 
   overflow: hidden;
 
@@ -143,8 +154,8 @@ div#MobileMenu {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 30vh;
-  max-height: 30vh;
+  min-height: 50vh;
+  max-height: 50vh;
   max-width: 95vw;
   transition: all 100ms ease-in-out;
 
@@ -155,8 +166,8 @@ div#MobileMenu {
 
 
 .banner-header {
-  min-height: 40vh;
-  max-height: 40vh;
+  min-height: 50vh;
+  max-height: 50vh;
 
   max-width: 100vw;
 
@@ -195,6 +206,7 @@ div#MobileMenu {
   justify-content: space-around;
 
   background-color: rgba(78,181,227,.36);
+  opacity: 1;
 }
 
 .info-nav-section {
@@ -307,6 +319,39 @@ div#MobileMenu {
   background-color: #fff;
 }
 
+.material-ul-basic {
+  display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   width: 50vw;
+   font-size: 20px;
+}
+
+.panel-green {
+  background-color: #00A863;
+  opacity: .8
+}
+
+.welcome-header {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+
+}
+
+#materialTableHeader {
+  color: white;
+}
+
+#materialTableHeader h2 {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+}
+
 /*===================Social Media Icon Color Definitions===================*/
 
 .fa-facebook, .fa-facebook-official, .fa-facebook-square {
@@ -376,18 +421,24 @@ div#MobileMenu {
 @media (max-width: 769px) {
 
   .banner-header {
-    min-height: 30vh;
-    max-height: 30vh;
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+
+  .banner-header img {
+    top: 0px !important;
   }
 
   .banner-img {
     width: 120%;
-    height: 350px;
+    height: 400px;
   }
 
   .banner-header-content {
-    min-height: 25vh;
-    max-height: 25vh;
+    min-height: 40vh;
+    max-height: 40vh;
+
+    margin-top: 40px;
 
   }
 
@@ -417,7 +468,19 @@ div#MobileMenu {
     font-size: 14px;
   }
 
-  .info-nav-data a, ul, span{
+  .info-nav-data span{
+    display: none;
+    max-width: 20vw;
+    max-height: 10vh;
+  }
+
+  .info-nav-data a{
+    display: none;
+    max-width: 20vw;
+    max-height: 10vh;
+  }
+
+  .info-nav-data ul{
     display: none;
     max-width: 20vw;
     max-height: 10vh;
@@ -446,6 +509,24 @@ div#MobileMenu {
 
   .mobile-hide {
     display: none;
+  }
+
+  #materialTableHeader p {
+    text-align: center;
+  }
+
+  #materialTableHeader h2 {
+    font-size: 25px;
+  }
+
+  .material-ul-basic {
+     flex-direction: column;
+     font-size: 14px;
+  }
+
+  .welcome-header {
+    font-size: 20px !important;
+    text-align: center;
   }
 }
 
