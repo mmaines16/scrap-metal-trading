@@ -3,6 +3,8 @@ import {recycledMaterials} from "../resources/materials";
 import { TablePagination } from 'react-pagination-table';
 
 export default class MaterialTable extends React.Component {
+
+  // Constructor to set the initial or default state values
   constructor() {
     super();
 
@@ -24,29 +26,23 @@ export default class MaterialTable extends React.Component {
     };
   }
 
+  //== Method to initialize all state values in state that rely on other components or external data==
   componentDidMount() {
     const numPages = Math.ceil(recycledMaterials.length/this.state.itemsPerPage);
     this.setState({...this.state, numberOfPages: numPages});
+
+    document.getElementById('pagination-previous').className = "disabled";
+    document.getElementById('pagination-first').className = "disabled";
   }
+  //================================================================================================
 
-  // #myInput {
-  //     background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-  //     background-position: 10px 12px; /* Position the search icon */
-  //     background-repeat: no-repeat; /* Do not repeat the icon image */
-  //     width: 100%; /* Full-width */
-  //     font-size: 16px; /* Increase font-size */
-  //     padding: 12px 20px 12px 40px; /* Add some padding */
-  //     border: 1px solid #ddd; /* Add a grey border */
-  //     margin-bottom: 12px; /* Add some space below the input */
-  // }
-
+  //============ Handles filtering the material list based on the "search" input field =============
   onInputKeyUp = () => {
-    // Declare variables
+    //===================== Declare variables ===========================
     var input, filter, table, tr, td, i;
     input = document.getElementById("materialSearchInput");
     filter = input.value.toUpperCase();
-    table = document.getElementById("mTable");
-    tr = table.getElementsByTagName("tr");
+    //===================================================================
 
     //======= If the filter is empty set the state to all materials and return =====
     if(filter == "") {
@@ -65,20 +61,89 @@ export default class MaterialTable extends React.Component {
     //===============================================================================
 
 
-
+    //====================== Set the materials list to the filtered list ============
     if(newMaterialList.length > 0) {
       var numPages = Math.ceil(newMaterialList.length/this.state.itemsPerPage);
       if(numPages == 0)
         numPages++;
       this.setState({...this.state, page: 1, materials: newMaterialList, numberOfPages: numPages});
     }
+    //===============================================================================
   };
+  //==========================================================================================
 
+
+  //========================= Mehtods that Control Pagination ================================
+
+  // Handles when a pagination button with a number is clicked. Takes user the page in the table
+  //     corresponding to the number they picked
   changePage = (pageId) => {
     if(this.state.page == pageId) return;
 
+    this.checkPagination(pageId);
     this.setState({...this.state, page: pageId});
+  };
+
+  // Handles when the "<<" or "First" button is clicked. Takes the user the the first page in the table
+  firstPage = () => {
+    if(this.state.page == 1 || this.state.page == "1" || document.getElementById('pagination-previous').className == "disabled")
+      return;
+
+    this.checkPagination(1);
+    this.setState({...this.state, page: 1});
+  };
+
+  // Handles when the ">" or "Next" button is clicked. Takes the user to the next page in the table
+  incrementPage = () => {
+    if(document.getElementById('pagination-next').className == "disabled")
+      return;
+
+    this.checkPagination(this.state.page + 1);
+    this.setState({...this.state, page: (this.state.page + 1)});
+  };
+
+  // Handles when the "<" or "Previous" button is clicked. Takes the user to the previous page in the table
+  decrementPage = () => {
+    if(document.getElementById('pagination-previous').className == "disabled")
+      return;
+
+    this.checkPagination(this.state.page - 1);
+    this.setState({...this.state, page: (this.state.page - 1)});
+  };
+
+  // Handles when the ">>" or "First" button is clicked. Takes the user the the last page in the table
+  lastPage = () => {
+    if(this.state.page == this.state.numberOfPages || document.getElementById('pagination-last').className == "disabled")
+     return;
+
+    this.checkPagination(this.state.numberOfPages);
+    this.setState({...this.state, page: this.state.numberOfPages});
+  };
+
+  // Handles setting and unset the CSS classes that control whether a button is enabled or disabled
+  checkPagination = (nextPage) => {
+    if(nextPage >= this.state.numberOfPages) {
+      document.getElementById('pagination-next').className = "disabled";
+      document.getElementById('pagination-last').className = "disabled";
+
+      document.getElementById('pagination-previous').className = "";
+      document.getElementById('pagination-first').className = "";
+    }
+    else if((nextPage) <= 1) {
+      document.getElementById('pagination-previous').className = "disabled";
+      document.getElementById('pagination-first').className = "disabled";
+
+      document.getElementById('pagination-next').className = "";
+      document.getElementById('pagination-last').className = "";
+    }
+    else {
+      document.getElementById('pagination-previous').className = "";
+      document.getElementById('pagination-first').className = "";
+      document.getElementById('pagination-next').className = "";
+      document.getElementById('pagination-last').className = "";
+    }
   }
+  //=============================================================================================
 
   render() {
     //=================== Map Filtered Materials to HTML elements ===================
@@ -148,8 +213,12 @@ export default class MaterialTable extends React.Component {
               {visibleMaterials}
             </tbody>
           </table>
-          <ul class="pagination pagination-lg" style={{display: "flex", flexDirection: "row", justifyContent: "flex-end"}}>
+          <ul class="pagination pagination-custom" style={{display: "flex", flexDirection: "row", justifyContent: "flex-end"}}>
+            <li id="pagination-first" onClick={this.firstPage}><a>&lt;&lt;</a></li>
+            <li id="pagination-previous" onClick={this.decrementPage}><a>&lt;</a></li>
             {tablePages}
+            <li id="pagination-next" onClick={this.incrementPage}><a>&gt;</a></li>
+            <li id="pagination-last" onClick={this.lastPage}><a>&gt;&gt;</a></li>
           </ul>
           </div>
         </div>
