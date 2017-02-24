@@ -42,6 +42,22 @@ export default class Home extends React.Component {
                   <li><span>We comply with all <strong>local</strong>, <strong>state</strong>, and <strong>federal</strong> environmental and waste disposal regulations.</span></li>
                 </ul>
               </li>
+
+              <li>
+                <ul style={{listStyle: "none", display: "flex", flexDirection: "row"}}>
+                  <li style={{marginRight: "10px"}}><img src="/img/award.png" /></li>
+                  <li>
+                    <span>
+                      We Purchase All Grades of:
+                        <strong style={{marginLeft: "5px"}}>Aluminum</strong>,
+                        <strong style={{marginLeft: "5px"}}>Copper</strong>,
+                        <strong style={{marginLeft: "5px"}}>Stainless Steel</strong>,
+                        <strong style={{marginLeft: "5px"}}>Insulated Wire</strong>, and
+                        <strong style={{marginLeft: "5px"}}>PC Boards</strong>
+                    </span>
+                  </li>
+                </ul>
+              </li>
             </ul>
 
             <p style={{display: "none"}}> Thank you to flaticon.com and Pixel Buddha for the award.png image!</p>
@@ -50,18 +66,9 @@ export default class Home extends React.Component {
           </div>
         </div>
 
-        <div class="panel panel-green">
+        <div class="panel panel-green" style={{width: "100vw", border: "none"}}>
           <div id="materialTableHeader" class="panel-heading container">
             <h2>RECYCLEABLE MATERIALS</h2>
-              <h4>We Purchase All Grades of:</h4>
-
-              <ul class="material-ul-basic">
-                <li>Aluminum</li>
-                <li>Copper</li>
-                <li>Stainless Steel</li>
-                <li>Insulated Wire</li>
-                <li>PC Boards</li>
-              </ul>
               <br/>
             <p>
               Below is a list of materials that can be recycled.

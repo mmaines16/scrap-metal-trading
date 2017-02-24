@@ -205,7 +205,7 @@ div#MobileMenu {
   align-content: center;
   justify-content: space-around;
 
-  background-color: rgba(78,181,227,.36);
+  background-color: rgba(33, 137, 245, 0.45);
   opacity: 1;
 }
 
@@ -319,6 +319,10 @@ div#MobileMenu {
   background-color: #fff;
 }
 
+#home .well {
+  margin-bottom: 0px;
+}
+
 .material-ul-basic {
   display: flex;
    flex-direction: row;
@@ -329,8 +333,19 @@ div#MobileMenu {
 }
 
 .panel-green {
-  background-color: #00A863;
-  opacity: .8
+  /*background-color: #0f8e36;*/
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#002400+1,005700+91,005700+99,005700+99,008a00+100,83c783+100,008a00+100,52b152+100,b4ddb4+100,52b152+100,008a00+101,008a00+102 */
+  background: #002400; /* Old browsers */
+  background: -moz-linear-gradient(left,  #002400 1%, #005700 91%, #005700 99%, #005700 99%, #008a00 100%, #83c783 100%, #008a00 100%, #52b152 100%, #b4ddb4 100%, #52b152 100%, #008a00 101%, #008a00 102%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #002400 1%,#005700 91%,#005700 99%,#005700 99%,#008a00 100%,#83c783 100%,#008a00 100%,#52b152 100%,#b4ddb4 100%,#52b152 100%,#008a00 101%,#008a00 102%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #002400 1%,#005700 91%,#005700 99%,#005700 99%,#008a00 100%,#83c783 100%,#008a00 100%,#52b152 100%,#b4ddb4 100%,#52b152 100%,#008a00 101%,#008a00 102%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002400', endColorstr='#008a00',GradientType=1 ); /* IE6-9 */
+
+}
+
+.danger-custom {
+  background-color: rgba(251, 18, 18, 0.3) !important;
+  opacity: .9 !important;
 }
 
 .welcome-header {
@@ -351,6 +366,12 @@ div#MobileMenu {
 	font-variant: normal;
 	font-weight: 500;
 }
+
+#home .panel>.panel-body {
+  background-color: #3D4846;
+
+}
+
 
 /*===================Social Media Icon Color Definitions===================*/
 
@@ -430,15 +451,15 @@ div#MobileMenu {
   }
 
   .banner-img {
-    width: 120%;
-    height: 400px;
+    width: 130%;
+    /*height: 400px;*/
   }
 
   .banner-header-content {
-    min-height: 40vh;
-    max-height: 40vh;
+    min-height: 50vh;
+    max-height: 50vh;
 
-    margin-top: 40px;
+    /*margin-top: 40px;*/
 
   }
 

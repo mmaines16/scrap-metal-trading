@@ -1,5 +1,6 @@
 import React from "react";
 import {recycledMaterials} from "../resources/materials";
+import { TablePagination } from 'react-pagination-table';
 
 export default class MaterialTable extends React.Component {
   constructor() {
@@ -16,8 +17,16 @@ export default class MaterialTable extends React.Component {
         padding: "12px 20px 12px 40px",
         border: "1px solid #ddd",
         marginBottom: "12px",
-      }
+      },
+      page: 1,
+      numberOfPages: 1,
+      itemsPerPage: 10,
     };
+  }
+
+  componentDidMount() {
+    const numPages = Math.ceil(recycledMaterials.length/this.state.itemsPerPage);
+    this.setState({...this.state, numberOfPages: numPages});
   }
 
   // #myInput {
@@ -39,26 +48,45 @@ export default class MaterialTable extends React.Component {
     table = document.getElementById("mTable");
     tr = table.getElementsByTagName("tr");
 
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
+    //======= If the filter is empty set the state to all materials and return =====
+    if(filter == "") {
+      const numPages = Math.ceil(recycledMaterials.length/this.state.itemsPerPage);
+      this.setState({...this.state, page: 1, materials: recycledMaterials, numberOfPages: numPages});
+      return;
+    }
+    //==============================================================================
+
+    //====== Filter the materials based on the search input box text value ==========
+    var newMaterialList = [];
+    recycledMaterials.forEach(function(material) {
+      if(material.title.toUpperCase().indexOf(filter)!=-1)
+            newMaterialList.push(material);
+    });
+    //===============================================================================
+
+
+
+    if(newMaterialList.length > 0) {
+      var numPages = Math.ceil(newMaterialList.length/this.state.itemsPerPage);
+      if(numPages == 0)
+        numPages++;
+      this.setState({...this.state, page: 1, materials: newMaterialList, numberOfPages: numPages});
     }
   };
 
-  render() {
+  changePage = (pageId) => {
+    if(this.state.page == pageId) return;
 
-    const materials = recycledMaterials.map((material) => {
-        //console.log("Material: " + material.title + "\n\t\t Needs proof of ownership: " + material.proofOfOwnership);
+    this.setState({...this.state, page: pageId});
+  }
+
+  render() {
+    //=================== Map Filtered Materials to HTML elements ===================
+    const materials = this.state.materials.map((material) => {
+
         if(material.proofOfOwnership == "true") {
           return (
-            <tr class="danger" key={material.title}>
+            <tr class="danger-custom" key={material.title}>
               <td>{material.title + "*"}</td>
               <td class="mobile-hide">yes</td>
             </tr>
@@ -72,7 +100,34 @@ export default class MaterialTable extends React.Component {
             </tr>
           );
         }
+
     });
+    //================================================================================
+
+    //== Determine which materials are visible depending on the current page in state ===
+    var visibleMaterials = [];
+
+    const startIndex = (this.state.itemsPerPage*(this.state.page-1));
+    const endIndex = (this.state.itemsPerPage*this.state.page);
+
+    for(var i = startIndex; i < endIndex; i++) {
+      visibleMaterials.push(materials[i]);
+    }
+    // ================================================================================
+
+
+    // ========== Create the Pagination buttons on the bottom of the table =============
+    const tablePages = Array(this.state.numberOfPages).fill().map((_, i) => {
+      if(this.state.page == i+1) {
+        return (
+          <li id={i+1} key={i+1} class="active" onClick={() => {this.changePage(i+1)}}><a>{i+1}</a></li>
+        );
+      }
+      return (
+        <li id={i+1} key={i+1} onClick={() => {this.changePage(i+1)}}><a>{i+1}</a></li>
+      );
+    });;
+    //==================================================================================
 
 
     return (
@@ -90,9 +145,12 @@ export default class MaterialTable extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {materials}
+              {visibleMaterials}
             </tbody>
           </table>
+          <ul class="pagination pagination-lg" style={{display: "flex", flexDirection: "row", justifyContent: "flex-end"}}>
+            {tablePages}
+          </ul>
           </div>
         </div>
       </div>

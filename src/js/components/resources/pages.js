@@ -12,7 +12,7 @@ export const pages = [
     "url": "contact-us",
   },
   {
-    "title": "Follow Us",
-    "url": "follow-us",
+    "title": "Get your Quote",
+    "url": "quote",
   },
 ];
