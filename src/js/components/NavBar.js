@@ -8,8 +8,6 @@ export default class NavBar extends React.Component {
   constructor() {
     super();
 
-    console.log(pages);
-
     this.state = {
       activeLink: "Home",
       historyStrategy: "hash",
@@ -45,8 +43,6 @@ export default class NavBar extends React.Component {
   }
 
   render() {
-    console.log(this.state);
-
     //Change link and href base url based on history strategy passed in as a property
     var baseUrl = "/";
     if(this.state.historyStrategy == "hash") {

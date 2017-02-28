@@ -1,6 +1,5 @@
 import React from "react";
 import {recycledMaterials} from "../resources/materials";
-import { TablePagination } from 'react-pagination-table';
 
 export default class MaterialTable extends React.Component {
 

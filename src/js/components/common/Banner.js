@@ -27,7 +27,6 @@ export default class Banner extends React.Component {
 
 
       bannerImg.style.top = elTop;
-      console.log(bannerImg.style.backgroundPosition);
 
   }
 
@@ -44,8 +43,6 @@ export default class Banner extends React.Component {
     }
     if(this.props.imgScroll=="true") {
       newState.imgScroll = this.props.imgScroll;
-
-      console.log("Adding window scroll event");
 
       window.addEventListener("scroll", () => {
         this.moveImage();

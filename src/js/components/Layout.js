@@ -27,7 +27,7 @@ export default class ComponentName extends React.Component {
 
     this.router = <Router history={ strategy }>
                         <Route path="/" component={Home} />
-                        <Route path="/about" component={About} />
+                        <Route path="/about" component={About} pathName="About"/>
                         <Route path="*" component={Home} />
                       </Router>;
 
@@ -59,6 +59,7 @@ export default class ComponentName extends React.Component {
 
   componentWillUpdate() {
     this.render();
+    console.log(this.props);
   }
 
   render() {
