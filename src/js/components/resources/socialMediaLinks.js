@@ -17,16 +17,16 @@ export const socialMediaLinks =[
     active: "true",
     faClass: "fa fa-twitter-square social-media-link",
   },
-  // {
-  //   platform: "youtube",
-  //   url: "https://youtube.com",
-  //   active: "true",
-  //   faClass: "fa fa-youtube-square social-media-link",
-  // },
-  // {
-  //   platform: "google+",
-  //   url: "https://plus.google.com/",
-  //   active: "true",
-  //   faClass: "fa fa-google-plus-square social-media-link",
-  // },
+  {
+    platform: "youtube",
+    url: "https://youtube.com",
+    active: "false",
+    faClass: "fa fa-youtube-square social-media-link",
+  },
+  {
+    platform: "google+",
+    url: "https://plus.google.com/",
+    active: "false",
+    faClass: "fa fa-google-plus-square social-media-link",
+  },
 ];
