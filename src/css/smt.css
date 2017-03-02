@@ -209,8 +209,14 @@ div#MobileMenu {
   align-content: center;
   justify-content: space-around;
 
-  background-color: rgba(33, 137, 245, 0.45);
+  /*background-color: rgba(33, 137, 245, 0.45);*/
+  background-color: rgb(247, 149, 3);
   opacity: 1;
+  color: white;
+}
+
+.info-nav-bar a {
+  color: white;
 }
 
 .info-nav-section {
@@ -230,7 +236,8 @@ div#MobileMenu {
 }
 
 .info-nav-header a {
-  color: #333333;
+  /*color: #333333;*/
+  color: white;
 }
 
 .info-nav-section .info-nav-data {
@@ -257,7 +264,8 @@ div#MobileMenu {
 
 .info-nav-list-item {
   margin: 5px;
-  color: #337ab7;
+  /*color: #337ab7;*/
+  color: white;
 }
 
 .info-nav-data-mobile {
@@ -360,6 +368,18 @@ div#MobileMenu {
 
 }
 
+.panel-blue {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b70ad+76,698caa+98,2b70ad+100,2b70ad+100,2b70ad+100,b2d9e4+100 */
+  background: #2b70ad; /* Old browsers */
+  background: -moz-linear-gradient(left,  #2b70ad 76%, #698caa 98%, #2b70ad 100%, #2b70ad 100%, #2b70ad 100%, #b2d9e4 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #2b70ad 76%,#698caa 98%,#2b70ad 100%,#2b70ad 100%,#2b70ad 100%,#b2d9e4 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #2b70ad 76%,#698caa 98%,#2b70ad 100%,#2b70ad 100%,#2b70ad 100%,#b2d9e4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b70ad', endColorstr='#b2d9e4',GradientType=1 ); /* IE6-9 */
+
+
+  color: white;
+}
+
 .danger-custom {
   background-color: rgba(251, 18, 18, 0.3) !important;
   opacity: .9 !important;
@@ -416,6 +436,28 @@ div#MobileMenu {
   height: 95%;
   border: 0px;
 
+}
+
+.panel-lg-text {
+  font-size: 22px;
+}
+
+.panel-long {
+  min-height: 450px;
+}
+
+.about-col-img {
+  height: 40vh;
+  width: 100%;
+}
+
+.about-col-p {
+  text-align: center;
+  font-size: 26px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #DDDDDD;
+  border-radius: 5px;
 }
 
 /*===================Social Media Icon Color Definitions===================*/
@@ -600,6 +642,21 @@ div#MobileMenu {
     font-size: 9px;
     line-height: 1.5;
   }
+
+  .info-nav-list-item, .info-nav-list-item-mobile {
+    margin: 5px;
+    /*color: #337ab7;*/
+    color: black !important;
+    font-size: 15px;
+  }
+
+  .panel-lg-text {
+    font-size: 11px;
+  }
+
+  .panel-long {
+    min-height: 250px;
+  }
 }
 
 @media (min-width: 770px) and (max-width: 1315px) {
@@ -617,6 +674,27 @@ div#MobileMenu {
 
   .pagination-custom {
 
+  }
+
+  .panel-lg-text {
+    font-size: 16px;
+  }
+
+  .info-nav-list-item, .info-nav-list-item-mobile {
+    margin: 5px;
+    /*color: #337ab7;*/
+    color: black !important;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .about-col-img {
+    height: 20vh;
+    width: 20vh;
+  }
+
+  .about-col-p {
+    font-size: 16px;
   }
 
 }

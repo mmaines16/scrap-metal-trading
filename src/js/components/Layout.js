@@ -4,6 +4,7 @@ import {Router, Route, hashHistory, browserHistory} from "react-router";
 
 import Home from "./Home";
 import About from "./About";
+import Console from "./Console";
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import NavBar from "./NavBar";
@@ -28,6 +29,7 @@ export default class ComponentName extends React.Component {
     this.router = <Router history={ strategy }>
                         <Route path="/" component={Home} />
                         <Route path="/about" component={About} pathName="About"/>
+                        <Route path="/console" component={Console}/>
                         <Route path="*" component={Home} />
                       </Router>;
 

@@ -7,7 +7,6 @@ export default class About extends React.Component {
   render() {
 
     var backgroundStyles = {
-      backgroundImage: "url('/img/people-coffee-notes-tea.jpg')",
       backgroundRepeat: "no-repeat",
       backgroundAttachment: "fixed",
       backgroundPosition: "0% 250px",
@@ -60,22 +59,22 @@ export default class About extends React.Component {
           </div>
         </Banner>
         <div class="panel">
-          <div class="panel-heading about-header panel-orange" style={{color: "white", textAlign: "center"}}>
+          <div class="panel-heading about-header panel-blue" style={{color: "white", textAlign: "center"}}>
             <h1>ABOUT US</h1>
           </div>
           <div class="panel-body">
             <div class="row well">
               <div class="col-sm-3">
-                <img src="/img/about-us-scrap-yard.jpeg" style={{maxHeight: "95%", maxWidth: "95%"}}/>
+                <img src="/img/about-us-scrap-yard.jpeg" class="about-col-img" />
               </div>
               <div class="col-sm-6">
-                <p style={{textAlign: "center", fontSize: "20px"}}>
+                <p class="about-col-p">
                   Welcome! SMT Recycling specializes in non-ferrous scrap metal recycling. Our family-owned and operated business in Winter Park, Florida has been serving the scrap metal industry. Our commitment to quality service has enabled us to grow. We guarantee top prices, cash upon delivery, are paid for your scrap. Let SMT Recycling be your scrap metal recycler of choice!
                   We comply with all local, state, and federal environmental and waste disposal regulations.
                 </p>
               </div>
               <div class="col-sm-3">
-                <img src="/img/about-us-scrap-yard.jpeg" style={{maxHeight: "95%", maxWidth: "95%"}}/>
+                <img src="/img/about-us-scrap-yard.jpeg" class="about-col-img" />
               </div>
             </div>
 
@@ -85,14 +84,14 @@ export default class About extends React.Component {
                     src="https://www.google.com/maps/embed/v1/place?q=place_id:Ei0zMDQxIE4gRm9yc3l0aCBSZCwgV2ludGVyIFBhcmssIEZMIDMyNzkyLCBVU0E&key=AIzaSyDHk_eNKRoOIR2F4GTS43Elq_U2_7QvODw" allowFullScreen></iframe>
               </div>
 
-              <div class="col-sm-6 " style={{minHeight: "450px"}}>
+              <div class="col-sm-6 ">
 
-                <div class="panel">
-                  <div class="panel panel-green about-header" style={{textAlign: "center"}}>
+                <div class="panel panel-long">
+                  <div class="panel-heading panel-green about-header" style={{textAlign: "center"}}>
                     <h4>HOW TO FIND US?</h4>
                   </div>
 
-                  <div class="panel-body">
+                  <div class="panel-body panel-lg-text">
 
                     {infoCard}
                   </div>
