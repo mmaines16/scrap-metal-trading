@@ -9,8 +9,8 @@ export const info = [
   {
     "type": "email",
     "headerText": "Email Us",
-    "href": "mailto:mmaines16@gmail.com",
-    "data": "mmaines16@gmail.com",
+    "href": "mailto:info@smtrecycling.com",
+    "data": "info@smtrecycling.com",
     "iconClass": "fa fa-envelope",
   },
   {

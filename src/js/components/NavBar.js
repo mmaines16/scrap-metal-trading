@@ -30,6 +30,11 @@ export default class NavBar extends React.Component {
           return true;
         else
           return false;
+      case "Contact-Us":
+        if (this.state.activeLink=="Contact-Us")
+          return true;
+        else
+          return false;
       default:
         return false;
     }

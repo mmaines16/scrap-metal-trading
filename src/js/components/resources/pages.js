@@ -11,8 +11,8 @@ export const pages = [
     "title": "Contact Us",
     "url": "contact-us",
   },
-  {
-    "title": "Get your Quote",
-    "url": "quote",
-  },
+  // {
+  //   "title": "Get your Quote",
+  //   "url": "quote",
+  // },
 ];
