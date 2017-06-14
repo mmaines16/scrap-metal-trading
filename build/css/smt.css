@@ -1,0 +1,700 @@
+.mobile-link {
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-link-row {
+  padding: 0px;
+  height: 30%;
+  text-align: center;
+}
+
+
+.mobile-link-long {
+  background-color: grey;
+  width: 53%;
+  display: inline-block;
+}
+
+.mobile-link-short {
+  background-color: #333;
+  width: 47%;
+  display: inline-block;
+}
+
+.mobile-link-full {
+  background-color: #aaa;
+  width: 100%;
+  display: inline-block;
+  height
+}
+
+div#MobileMenu {
+  padding: 0px;
+  height: 99vh;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  opacity: .9;
+}
+
+.navbar-main-links>li:hover, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  background-color: #1a99ed;
+  /*background-color: #dad9d9;*/
+}
+.navbar-main-links>li>a:hover {
+  color: white !important;
+}
+
+
+.navbar-default .navbar-nav>.active>a {
+  color: white !important;
+  background-color: #0172BC;
+}
+
+.navbar .fa-facebook-official {
+  font-size: 30px;
+
+}
+
+
+.navbar .social-media-link {
+  margin-top: 10px;
+}
+
+/* Css for MobileMenu Components animation when entering and leaving the DOM */
+/*.fade {
+  opacity: 1;
+  transition: all 1s;
+}*/
+
+.fade-appear {
+  opactiy: 0.01;
+}
+
+.fade-appear.fade-appear-active {
+  opactiy: 1;
+  transition: all 1s;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: all .3s ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0;
+}
+
+
+.h1-a {
+  opactiy: 1;
+}
+
+.h1-a:hover {
+  opacity: 0.01;
+
+  transition: all 1s;
+}
+
+.mobile-link-header-text {
+  display: block;
+  height: 50px;
+  width: 100%;
+  top: 30%;
+  text-align: center;
+}
+
+.banner {
+  min-height: 50vh;
+  max-height: 50vh;
+
+  overflow: hidden;
+
+  transition: all 100ms ease-in-out;
+}
+
+#home .banner {
+  margin-top: 80px;
+}
+
+#about .banner {
+  margin-top: 80px;
+}
+
+.banner-img {
+  z-index: -200;
+  width: 120%;
+  height: 600px;
+  position: absolute;
+  transition: all 100ms ease-in-out;
+}
+
+.banner-img-filter {
+  width: 100%;
+
+  position: absolute;
+
+  background-color: rgba(160, 160, 160, 0.5);
+  opacity: .5;
+}
+
+#home .banner-img-filter {
+  top: 20px;
+  left: 0px;
+}
+
+.banner-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  max-height: 40vh;
+  max-width: 95vw;
+  transition: all 100ms ease-in-out;
+
+  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+  font-size: 128px;
+}
+
+
+
+.banner-header {
+  min-height: 50vh;
+  max-height: 50vh;
+
+  max-width: 100vw;
+
+  overflow: hidden;
+
+}
+
+#home,#about .banner-header {
+  margin-top: 80px;
+
+  top: 0px;
+}
+
+#home,#about .fa-play-circle-o {
+  color: lightgrey;
+}
+
+#home, #about .fa-play-circle-o:hover {
+  color: grey;
+}
+
+#home, #about .fa-youtube-play {
+  color: lightgrey !important;
+}
+
+#home, #about .fa-youtube-play:hover {
+  color: grey !important;
+}
+
+
+
+.info-nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+
+  /*background-color: rgba(33, 137, 245, 0.45);*/
+  background-color: rgb(247, 149, 3);
+  opacity: 1;
+  color: white;
+}
+
+.info-nav-bar a {
+  color: white;
+}
+
+.info-nav-section {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  font-size: 14px;
+
+  max-height: 30px;
+}
+
+.info-nav-section > .info-nav-header {
+  font-family: Impact, Charcoal, sans-serif;
+  margin-right: 5px;
+
+}
+
+.info-nav-header a {
+  /*color: #333333;*/
+  color: white;
+}
+
+.info-nav-section .info-nav-data {
+  font-family: "Courier New", Courier, monospace;
+  margin-right: 5px;
+  display: flex;
+
+
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.info-nav-list {
+  list-style: none;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  padding-left: 0px;
+  margin-top: 10px;
+}
+
+.info-nav-list-item {
+  margin: 5px;
+  /*color: #337ab7;*/
+  color: white;
+}
+
+.info-nav-data-mobile {
+  position: absolute;
+  top: 25px;
+  left: 43vw;
+
+  width: 50vw;
+  height: 15vh;
+  box-shadow: 2px 2px 2px 2px black;
+
+  z-index: 999;
+
+
+  transition: all 100ms ease-in-out;
+}
+
+.info-nav-list-mobile {
+  font-size: 16px;
+  list-style: none;
+}
+
+.info-nav-list-mobile-exit {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+
+.info-nav-list-mobile-exit i{
+  position: absolute;
+  color: red;
+  right: -30px;
+  font-size: 20px !important;
+}
+
+.mobile-social-media-links {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  justify-content: space-between;
+
+  text-align: center;
+
+  min-width: 10vw;
+  max-width: 30vw;
+}
+
+/*Bigger font size for social media icons in the mobile menu*/
+.mobile-link-row .mobile-social-media-links {
+  font-size: 50px;
+}
+
+#home .panel-body {
+  background-color: #eee;
+}
+
+#home .panel-heading {
+  padding-left: 20px;
+}
+
+#home table {
+  background-color: #fff;
+}
+
+#home .well {
+  margin-bottom: 0px;
+}
+
+.material-ul-basic {
+  display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   width: 50vw;
+   font-size: 20px;
+}
+
+.panel-green {
+  /*background-color: #0f8e36;*/
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#002400+1,005700+91,005700+99,005700+99,008a00+100,83c783+100,008a00+100,52b152+100,b4ddb4+100,52b152+100,008a00+101,008a00+102 */
+  background: #002400; /* Old browsers */
+  background: -moz-linear-gradient(left,  #002400 1%, #005700 91%, #005700 99%, #005700 99%, #008a00 100%, #83c783 100%, #008a00 100%, #52b152 100%, #b4ddb4 100%, #52b152 100%, #008a00 101%, #008a00 102%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #002400 1%,#005700 91%,#005700 99%,#005700 99%,#008a00 100%,#83c783 100%,#008a00 100%,#52b152 100%,#b4ddb4 100%,#52b152 100%,#008a00 101%,#008a00 102%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #002400 1%,#005700 91%,#005700 99%,#005700 99%,#008a00 100%,#83c783 100%,#008a00 100%,#52b152 100%,#b4ddb4 100%,#52b152 100%,#008a00 101%,#008a00 102%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002400', endColorstr='#008a00',GradientType=1 ); /* IE6-9 */
+
+  color: white;
+}
+
+.panel-orange {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#db4f03+10,db4f03+10,db4f03+70,fd8341+96,feb690+100 */
+  background: #db4f03; /* Old browsers */
+  background: -moz-linear-gradient(left,  #db4f03 10%, #db4f03 10%, #db4f03 70%, #fd8341 96%, #feb690 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #db4f03 10%,#db4f03 10%,#db4f03 70%,#fd8341 96%,#feb690 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #db4f03 10%,#db4f03 10%,#db4f03 70%,#fd8341 96%,#feb690 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db4f03', endColorstr='#feb690',GradientType=1 ); /* IE6-9 */
+
+  color: white;
+
+}
+
+.panel-blue {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b70ad+76,698caa+98,2b70ad+100,2b70ad+100,2b70ad+100,b2d9e4+100 */
+  background: #2b70ad; /* Old browsers */
+  background: -moz-linear-gradient(left,  #2b70ad 76%, #698caa 98%, #2b70ad 100%, #2b70ad 100%, #2b70ad 100%, #b2d9e4 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #2b70ad 76%,#698caa 98%,#2b70ad 100%,#2b70ad 100%,#2b70ad 100%,#b2d9e4 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #2b70ad 76%,#698caa 98%,#2b70ad 100%,#2b70ad 100%,#2b70ad 100%,#b2d9e4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b70ad', endColorstr='#b2d9e4',GradientType=1 ); /* IE6-9 */
+
+
+  color: white;
+}
+
+.danger-custom {
+  background-color: rgba(251, 18, 18, 0.3) !important;
+  opacity: .9 !important;
+}
+
+.welcome-header, .about-header {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+}
+
+.welcome-header {
+  color: black;
+}
+
+#materialTableHeader {
+  color: white;
+}
+
+#materialTableHeader h2 {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+}
+
+#home .panel>.panel-body {
+  background-color: #3D4846;
+
+}
+
+.navbar-brand {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 10px;
+}
+
+.table-responsive {
+  border: none;
+  color: black;
+}
+
+.pagination-custom>li>a, .pagination-custom>li>span {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+
+.googleMaps {
+  min-height: 450px;
+  width: 95%;
+  height: 95%;
+  border: 0px;
+
+}
+
+.panel-lg-text {
+  font-size: 22px;
+}
+
+.panel-long {
+  min-height: 450px;
+}
+
+.about-col-img {
+  height: 40vh;
+  width: 100%;
+}
+
+.about-col-p {
+  text-align: center;
+  font-size: 26px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #DDDDDD;
+  border-radius: 5px;
+}
+
+/*===================Social Media Icon Color Definitions===================*/
+
+.fa-facebook, .fa-facebook-official, .fa-facebook-square {
+    color: #3b5998;
+}
+
+.fa-facebook:hover, .fa-facebook-official:hover, .fa-facebook-square:hover {
+    color: #2d3f67;
+}
+
+.fa-twitter, .fa-twitter-square {
+    color: #00aced;
+}
+
+.fa-twitter:hover, .fa-twitter-square:hover {
+    color: #007fad;
+}
+
+.fa-google-plus, .fa-google-plus-square {
+    color: #dd4b39;
+}
+
+.fa-google-plus:hover, .fa-google-plus-square:hover {
+    color: #aa0a05;
+}
+
+.fa-youtube, .fa-youtube-play, .fa-youtube-square {
+    color: #bb0000;
+}
+
+.fa-youtube:hover, .fa-youtube-play:hover, .fa-youtube-square:hover {
+    color: #880000;
+}
+
+.fa-tumblr, .fa-tumblr-square {
+    color: #32506d;
+}
+
+.fa-flickr {
+    color: #ff0084;
+}
+
+.fa-vimeo-square {
+    color: #aad450;
+}
+
+.fa-pinterest, .fa-pinterest-square {
+    color: #cb2027;
+}
+
+.fa-linkedin, .fa-linkedin-square {
+    color: #007bb6;
+}
+
+.fa-instagram {
+    color: #517fa4;
+}
+
+.fa-instagram:hover {
+    color: #395a74;
+}
+
+.fa-spotify {
+    color: #1ED760;
+}
+
+@media (max-width: 769px) {
+
+  .banner-header {
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+
+  .banner-header img {
+    top: 0px !important;
+  }
+
+  .banner-img {
+    width: 130%;
+    /*height: 400px;*/
+  }
+
+  .banner-header-content {
+    min-height: 50vh;
+    max-height: 50vh;
+
+    /*margin-top: 40px;*/
+
+  }
+
+  .fa-play-circle-o {
+    font-size: 90px;
+  }
+
+  .fa-youtube-play {
+    font-size: 90px;
+  }
+
+  .info-nav-section {
+    font-size: 6px;
+    min-width: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
+
+  .info-nav-header a, span{
+    font-size: 14px;
+  }
+
+  .info-nav-section i{
+    font-size: 14px;
+  }
+
+  .info-nav-data span{
+    display: none;
+    max-width: 20vw;
+    max-height: 10vh;
+  }
+
+  .info-nav-data a{
+    display: none;
+    max-width: 20vw;
+    max-height: 10vh;
+  }
+
+  .info-nav-data ul{
+    display: none;
+    max-width: 20vw;
+    max-height: 10vh;
+  }
+
+  .info-nav-data ul{
+    display: none;
+    max-width: 20vw;
+    max-height: 10vh;
+  }
+
+  .mobile-social-media-links {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+
+    min-width: 100vw;
+    max-width: 100vw;
+
+    padding: 10vw;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  #materialTableHeader p {
+    text-align: center;
+  }
+
+  #materialTableHeader h2 {
+    font-size: 25px;
+  }
+
+  .material-ul-basic {
+     flex-direction: column;
+     font-size: 14px;
+  }
+
+  .welcome-header {
+    font-size: 20px !important;
+    text-align: center;
+  }
+
+  .pagination-custom>li>a, .pagination-custom>li>span {
+    padding: 5px 10px;
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .info-nav-list-item, .info-nav-list-item-mobile {
+    margin: 5px;
+    /*color: #337ab7;*/
+    color: black !important;
+    font-size: 15px;
+  }
+
+  .panel-lg-text {
+    font-size: 11px;
+  }
+
+  .panel-long {
+    min-height: 250px;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1315px) {
+  .info-nav-section i{
+    font-size: 14px;
+  }
+
+  .info-nav-data a {
+    display: none !important;
+  }
+
+  .info-nav-data ul{
+    display: none !important;
+  }
+
+  .pagination-custom {
+
+  }
+
+  .panel-lg-text {
+    font-size: 16px;
+  }
+
+  .info-nav-list-item, .info-nav-list-item-mobile {
+    margin: 5px;
+    /*color: #337ab7;*/
+    color: black !important;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .about-col-img {
+    height: 20vh;
+    width: 20vh;
+  }
+
+  .about-col-p {
+    font-size: 16px;
+  }
+
+}
